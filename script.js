@@ -41,5 +41,5 @@ document.getElementById(`js-score-container`).innerHTML = `Wins: ${wins}, Losses
 
 function choiceDisplay(playermove) {
     const computer = computerMove();
-    document.getElementById(`js-choices-container`).innerHTML = `You : <img class="choiceDisplay "src="/Images/${playermove}-emoji.png"> - Computer : <img class="choiceDisplay" src="Images/${computer}-emoji.png">`;
+    document.getElementById(`js-choices-container`).innerHTML = `You : <img class="choiceDisplay "src="./Images/${playermove}-emoji.png"> - Computer : <img class="choiceDisplay" src="./Images/${computer}-emoji.png">`;
 }
