@@ -10,11 +10,12 @@
   <h1 class="title">Rock Paper and Scissors</h1>
    
   <div class="choice-container">
-		<button class="playermove" onclick="score(playGame('rock'));">Rock</button>
-    <button class="playermove" onclick="score(playGame('paper'));">Paper</button>
-    <button class="playermove" onclick="score(playGame('scissors'));">Scissors</button>	
+		<button class="player-move-container" onclick="score(playGame('rock')); choiceDisplay('rock');"><img class="playermove" src="/Images/rock-emoji.png"></button>
+    <button class="player-move-container" onclick="score(playGame('paper')); choiceDisplay('paper');"><img class="playermove" src="/Images/paper-emoji.png"></button>
+    <button class="player-move-container" onclick="score(playGame('scissors')); choiceDisplay('scissors');"><img class="playermove" src="/Images/scissors-emoji.png"></button>	
   </div>
   <div class="js-result-container"></div>
+  <div id="js-choices-container"></div>
   <div id="js-score-container">Wins: 0, Losses: 0, Ties: 0</div>
     
 

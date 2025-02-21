@@ -15,4 +15,38 @@ body {
 
 .title {
 	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+.playermove, .choiceDisplay{
+	width: 60px;
+	height: 60px
+}
+
+.player-move-container {
+	height: 100px;
+	width: 100px;
+	background-color: transparent;
+	border: 3px solid white;
+	border-radius: 50%;
+	margin-bottom: 20px;
+	margin-right: 10px;
+}
+
+.js-result-container {
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+#js-score-container {
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 25px;
+}
+
+#js-choices-container {
+	margin-bottom: 30px;
+	font-size: 25px;
+	font-weight: bold;
 }

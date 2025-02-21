@@ -9,7 +9,7 @@ function computerMove() {
     }
 }
 
-const playGame = function playGame(playerMove) {
+function playGame(playerMove) {
     const computer = computerMove();
     const resultContainer = document.getElementsByClassName('js-result-container')[0];
     
@@ -22,13 +22,13 @@ const playGame = function playGame(playerMove) {
     } else {
         resultContainer.innerHTML = 'You Lose!';
         return ("lose");
-    }
+    } 
 }
 
 let wins = 0;
 let losses = 0;	
 let ties = 0;
-let score = function score(result) { 
+function score(result) { 
 		if (result ==='win') {
 			wins++;
 	} else if (result ==='lose') {
@@ -37,6 +37,9 @@ let score = function score(result) {
 			ties++;
 	}
 document.getElementById(`js-score-container`).innerHTML = `Wins: ${wins}, Losses: ${losses}, Ties: ${ties}`;
-};
+}
 
-
+function choiceDisplay(playermove) {
+    const computer = computerMove();
+    document.getElementById(`js-choices-container`).innerHTML = `You : <img class="choiceDisplay "src="/Images/${playermove}-emoji.png"> - Computer : <img class="choiceDisplay" src="Images/${computer}-emoji.png">`;
+}
