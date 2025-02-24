@@ -8,9 +8,7 @@ function computerMove() {
         return 'scissors';
     }
 }
-
-function playGame(playerMove) {
-    const computer = computerMove();
+function playGame(playerMove, computer) {
     const resultContainer = document.getElementsByClassName('js-result-container')[0];
     
     if (playerMove === computer) {
@@ -39,7 +37,14 @@ function score(result) {
 document.getElementById(`js-score-container`).innerHTML = `Wins: ${wins}, Losses: ${losses}, Ties: ${ties}`;
 }
 
-function choiceDisplay(playermove) {
-    const computer = computerMove();
+function choiceDisplay(playermove, computer) {
     document.getElementById(`js-choices-container`).innerHTML = `You : <img class="choiceDisplay "src="./Images/${playermove}-emoji.png"> - Computer : <img class="choiceDisplay" src="./Images/${computer}-emoji.png">`;
+}
+
+
+function main(playermove) { 
+  const computer = computerMove();
+  playGame(playermove, computer);  
+  score(playGame(playermove, computer));
+  choiceDisplay(playermove, computer);
 }
